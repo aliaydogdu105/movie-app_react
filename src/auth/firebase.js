@@ -8,8 +8,13 @@ import {
   updateProfile,
   GoogleAuthProvider,
   signInWithPopup,
+  sendPasswordResetEmail,
 } from "firebase/auth";
-import { toastErrorNotify, toastSuccessNotify } from "../helpers/ToastNotify";
+import {
+  toastErrorNotify,
+  toastSuccessNotify,
+  toastWarnNotify,
+} from "../helpers/ToastNotify";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -86,5 +91,15 @@ export const signUpProvider = (navigate) => {
     })
     .catch((error) => {
       toastErrorNotify(error.message);
+    });
+};
+
+export const forgotPassword = (email) => {
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      toastWarnNotify("Please check your mail box!");
+    })
+    .catch((err) => {
+      toastErrorNotify(err.message);
     });
 };
