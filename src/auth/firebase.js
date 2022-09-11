@@ -9,6 +9,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
+import { toastErrorNotify, toastSuccessNotify } from "../helpers/ToastNotify";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -37,10 +38,11 @@ export const createUser = async (email, password, navigate, displayName) => {
     await updateProfile(auth.currentUser, {
       displayName: displayName,
     });
+    toastSuccessNotify("Registered succesfully");
     navigate("/");
     console.log(userCredential);
   } catch (error) {
-    console.log(error);
+    toastErrorNotify(error.message);
   }
 };
 
@@ -51,10 +53,11 @@ export const sigIn = async (email, password, navigate) => {
       email,
       password
     );
+    toastSuccessNotify("Logged in succesfully");
     navigate("/");
     console.log(userCredential);
   } catch (error) {
-    console.log(error);
+    toastErrorNotify(error.message);
   }
 };
 
@@ -79,8 +82,9 @@ export const signUpProvider = (navigate) => {
     .then((result) => {
       console.log(result);
       navigate("/");
+      toastSuccessNotify("Logged out succesfully");
     })
     .catch((error) => {
-      console.log(error);
+      toastErrorNotify(error.message);
     });
 };
