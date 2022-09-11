@@ -15,13 +15,18 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand text-white">
-            <h4>Movie App</h4>
+            <div>
+              <span>&#8283; </span>Movie App
+            </div>
           </Link>
           <div className="d-flex text-white align-items-center">
             {currentUser ? (
               <>
                 <h5 className="mb-0 text-capitalize">
                   {currentUser.displayName}
+                  <span> &#10092;</span>
+                  <span>&#10092;</span>
+                  <span>&#10092;</span>
                 </h5>
                 <button
                   className="ms-2 btn btn-outline-light"
