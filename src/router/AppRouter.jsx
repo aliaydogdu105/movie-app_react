@@ -12,6 +12,7 @@ import MovieDetail from "../pages/MovieDetail";
 import Navbar from "../components/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import Footer from "../components/Footer";
 
 const AppRouter = () => {
   const { currentUser } = useContext(AuthContext);
@@ -31,6 +32,7 @@ const AppRouter = () => {
           <Route path="" element={<MovieDetail />} />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
