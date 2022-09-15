@@ -1,3 +1,47 @@
+# Movie App
+
+This project was made with React. Styled with bootstrap and responsive design for mobile phones. Signup https://www.themoviedb.org/documentation/api and get API key for getting data from https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}, for searching movies https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query= and for movie details https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}. In order to see the movie details, authentication is required by mail or google account. Firebase is used. For login random background image from `https://picsum.photos/800/800`
+
+For look [please click here](https://movie-app-react-ali.netlify.app/)
+
+![](movie-app.gif)
+
+## Project Skeleton
+
+```
+Movie App
+|
+├── public
+│     └── index.html
+├── src
+│    ├── auth
+│    │     └── firebase.js
+│    ├── components
+│    │     ├── Navbar.jsx
+│    │     ├── MovieCard.jsx
+│    │     ├── VideoSection.jsx
+│    │     └── Footer.jsx
+│    ├── context
+│    │     └── AuthContext.jsx
+│    ├── helpers
+│    │     └── ToastNotify.jsx
+│    ├── pages
+│    │     ├── Login.jsx
+│    │     ├── Register.jsx
+│    │     ├── Main.jsx
+│    │     └── MovieDetail.jsx
+│    ├── router
+│    │     └── AppRouter.jsx
+│    ├── App.js
+│    ├── App.css
+│    ├── index.js
+│    └── index.css
+├── package.json
+|----README.md
+├── movie-app.gif
+└── yarn.lock
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
