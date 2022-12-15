@@ -1,6 +1,6 @@
 # Movie App
 
-This project was made with React. Styled with bootstrap and responsive design for mobile phones. Signup https://www.themoviedb.org/documentation/api and get API key for getting data from https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}, for searching movies https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query= and for movie details https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}. In order to see the movie details, authentication is required by mail or google account. Firebase is used. For login random background image from `https://picsum.photos/800/800`
+This project was made with React. Styled with bootstrap and responsive design for mobile phones. Signup `https://www.themoviedb.org/documentation/api` and get API key for getting data from `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`, for searching movies `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=` and for movie details `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`. In order to see the movie details, authentication is required by mail or google account. Firebase is used. For login random background image from `https://picsum.photos/800/800`
 
 For look [please click here](https://movie-app-react-ali.netlify.app/)
 
@@ -41,6 +41,7 @@ Movie App
 ├── movie-app.gif
 └── yarn.lock
 ```
+For look [please click here](https://movie-app-react-ali.netlify.app/)
 
 # Getting Started with Create React App
 
